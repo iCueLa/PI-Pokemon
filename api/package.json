@@ -33,7 +33,7 @@
     "supertest": "^6.0.1",
     "supertest-session": "^4.1.0"
   },
-  "eslintConfig":{
-    "extends" : "./node_module/standard/slintrc.json"
+  "eslintConfig": {
+    "extends": "./node_module/standard/slintrc.json"
   }
 }
