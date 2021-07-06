@@ -4,16 +4,15 @@ module.exports = (sequelize) => {
 
 
 sequelize.define('type',{
-    id:{
+    /* id:{
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-    },
+    }, */
     name:{
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      unique: true
     }
   })
-
-
 };

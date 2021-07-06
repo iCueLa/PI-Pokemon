@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint .",
     "start": "nodemon -L",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
   "author": "Henry",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -22,10 +24,16 @@
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "supertest-session": "^4.1.0",
-    "mocha": "^8.2.1",
     "chai": "^4.2.0",
+    "eslint": "7.30.0",
+    "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
-    "supertest": "^6.0.1"
+    "standard": "^16.0.3",
+    "standart": "^6.1.0",
+    "supertest": "^6.0.1",
+    "supertest-session": "^4.1.0"
+  },
+  "eslintConfig":{
+    "extends" : "./node_module/standard/slintrc.json"
   }
 }
