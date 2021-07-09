@@ -1,0 +1,36 @@
+.container {
+    background-color: #b81f21f3;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.Input{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 200px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 15px 0 0 15px ;
+    outline:none;
+    border:none;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.Button{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 4px;
+    background-color: orange;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.Button:hover{
+    background-color:#b81f21f3;
+    color: white;
+}

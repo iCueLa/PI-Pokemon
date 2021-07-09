@@ -1,0 +1,48 @@
+.container{
+    height: 90vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background-size: 100%;
+    color: white;
+}
+
+
+.Form{
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #b81f21f3;
+    border-radius: 15px;
+    padding: px 0;
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+    border-color: gray;
+    
+}
+
+.containerInput{
+    padding-left: 15px;
+    margin: 10px;
+    display: flex;
+    background-color: #2b2d42;
+    height: 30px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: gray;
+}
+.Inputs {
+    margin-left: 15px;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+}

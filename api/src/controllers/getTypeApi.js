@@ -4,7 +4,6 @@ const {POKEMON_TYPE} = require("../Util/const")
 
 
 //Agrega los tipos de pokemones a la base de datos automaticamente cuando se levanta el servidor!!
-
 const addTypeDb = async ()=>{
     try{
         const prueba = await axios.get(POKEMON_TYPE)
@@ -27,4 +26,5 @@ const getTypeApi = async ()=>{
 }
 
 module.exports = {
-    getTypeApi}
+    getTypeApi
+}

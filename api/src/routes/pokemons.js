@@ -24,7 +24,7 @@ router.get('/', async(req,res,next)=>{
          return res.status(404).json('Pokemon not found')
        }
        return res.status(200).send(resultName)
-    }
+      }
        return res.status(200).json(result)
     
   }catch(err){
