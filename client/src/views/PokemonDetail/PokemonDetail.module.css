@@ -10,7 +10,7 @@
 }
 
 .panel{
-    height: 400px;
+    height: 450px;
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -118,4 +118,11 @@ font-style: oblique;
     width: 80px;
     border-radius: 15px 15px 0px 0px;
     border-style:hidden;
+}
+.ID{
+    background-color: #2b2d42;
+    padding: 5px;
+    margin:5px;
+    border-radius: 10px;
+    color: white;
 }

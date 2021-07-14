@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./components/Navbar/Navbar"
 import {Inicio}  from "./views/Inicio/Inicio";
 import { Route } from "react-router-dom";
-import Pokedex from "./views/Home/Home";
+import Pokedex from "./views/Home/Pokedex";
 import { CreatePokemon } from "./views/createPokemon/createPokemon";
 import { PokemonDetail } from "./views/PokemonDetail/PokemonDetail";
 

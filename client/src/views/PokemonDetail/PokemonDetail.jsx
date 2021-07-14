@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { clearPage, getdata } from '../../actions/actions'
+import { clearPage, getdata, getPokemons } from '../../actions/actions'
 import { Link } from 'react-router-dom'
 import s from "./PokemonDetail.module.css"
 
@@ -12,6 +12,7 @@ export const PokemonDetail = () => {
     const {id} = useParams()
     useEffect(()=>{
         dispatch(getdata(id));
+        dispatch(getPokemons())
         return ()=>dispatch(clearPage())
     },[id,dispatch])
 
@@ -53,8 +54,8 @@ export const PokemonDetail = () => {
                                     <p>{pokemon.weight}</p>
                                     <p>Weight</p>
                                 </div>
-
                         </div>
+                                <p className={s.ID}>id:{pokemon.id}</p>
                         <div className={s.Bottom}>
                             <h2>Tipo:</h2>
                             <div>
@@ -74,7 +75,10 @@ export const PokemonDetail = () => {
                 </>
                 :pokemon === undefined?
                         <img src="https://i.pinimg.com/originals/4d/f0/38/4df03842be46631dc8b4f1b313638161.gif" /* width="300" height="300" */ alt="" className={s.loading} />:
+                <>
                 <h1>Pokemon no encontrado</h1>
+                            <img src="https://media.tenor.com/images/4e01b5dc1c442f5af3d7cf11b79bda13/tenor.gif" alt="" />
+                </>
             }
         </div>
     )

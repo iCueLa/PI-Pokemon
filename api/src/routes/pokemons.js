@@ -9,6 +9,9 @@ const getPokemonsDb = require('../controllers/getPokemonsDb');
 
 const router = Router()
 
+
+
+
 module.exports = router
 
 
@@ -23,7 +26,7 @@ router.get('/', async(req,res,next)=>{
        if(resultName.length === 0){
          return res.status(404).json('Pokemon not found')
        }
-       return res.status(200).send(resultName)
+       return res.status(200).json(resultName)
       }
        return res.status(200).json(result)
     
@@ -31,6 +34,24 @@ router.get('/', async(req,res,next)=>{
      return next(err)
   }
 });
+
+router.get('/API', async(req, res, next)=>{
+const result = await getPokemonsApi()
+try{
+  res.status(200).json(result)
+}catch(err){
+  next(err)
+}
+})
+
+router.get('/DB', async(req, res, next)=>{
+const result = await getPokemonsDb()
+try{
+  res.status(200).json(result)
+}catch(err){
+  next(err)
+}
+})
 
 router.get("/:id", async(req, res, next)=>{
     const { id } = req.params

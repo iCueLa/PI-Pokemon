@@ -11,7 +11,7 @@ const createPokemon = async (name, hp, attack, defense, speed, height, weight, s
        speed: speed || 0,
        height: height || 0,
        weight: weight || 0 ,
-       sprite: sprite || "https://www.vhv.rs/dpng/d/424-4249607_poke-ball-png-pokeball-png-transparent-png.png"
+       sprite: sprite || "https://image.flaticon.com/icons/png/512/528/528101.png"
      },
      )
      if(type.length === 1){

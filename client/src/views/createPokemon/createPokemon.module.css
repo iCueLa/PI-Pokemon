@@ -11,15 +11,15 @@
 
 
 .Form{
-    height: 400px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background-color: #b81f21f3;
     border-radius: 15px;
-    padding: px 0;
+    padding: 20px;
     border-left: 10px solid;
     border-bottom: 10px solid;
     border-color: gray;
@@ -45,4 +45,33 @@
     border-radius: 15px;
     border:none;
     outline: none;
+}
+
+.containerButon{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    background-color: #2b2d42;
+    border-radius: 15px 15px 15px 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: gray;
+
+
+}
+.BUTON{
+    margin: 10px;
+    border-radius: 15px 15px 15px 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: gray;
+
+}
+.PushButon{
+
+    margin: 10px;
+    border-radius: 15px 15px 15px 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: gray;
 }

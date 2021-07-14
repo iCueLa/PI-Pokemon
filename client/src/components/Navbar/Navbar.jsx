@@ -3,7 +3,11 @@ import { NavLink } from 'react-router-dom';
 import s from "./Navbar.module.css";
 import Search from '../Search/Search';
 
+
 export default function NavBar() {
+
+
+//-------------------------------------------------------//
     return (
         <header className={s.container}>
 
@@ -11,7 +15,7 @@ export default function NavBar() {
                 <ul className={s.List}>
                     <li className={s.ListItem}>
                         <NavLink exact to="/Home">Home</NavLink>
-                        <NavLink to="/Home/Add">Crear Pokemon</NavLink>
+                        <NavLink to="/Home/Add">Add Pokemon</NavLink>
                         <NavLink to="/Home/FavoritePokemon">Favoritos</NavLink>
                     </li>
                 </ul>
