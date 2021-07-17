@@ -11,7 +11,6 @@ const initialState = {
     pokemonsDB: [],
     pokemonsAPI: [],
     data: undefined,
-
 };
 
 function rootReducer(state = initialState, action) {

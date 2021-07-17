@@ -7,12 +7,12 @@ const Card = ({name, id, img , type}) => {
     const redHeart = "💖"
     return (
         <div className={j.pokemonCard} key={id}>
-            <div className={j.pokemonImgConteiner}>
+            <div className={j.pokemonImgConteiner} >
                 <img className={j.pokemonImg} src={img} alt={name} />
             </div>
             <div className={j.cardBody}>
                 <div className={j.cardTop}>
-                    {<Link to={`/Home/data/${id} `}><a>{name}</a></Link>}
+                    {<Link to={`/Home/data/${id} `}><p>{name}</p></Link>}
                 </div>
                 <div className={j.typeTitle}>
                         type:

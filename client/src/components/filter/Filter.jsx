@@ -15,6 +15,8 @@ export const Filter = () => {
     const dispatch = useDispatch()
 
     //---------------------INDEX-------------------//
+
+    
     if(totalpokemons.length !== 0 && pokemonAPI.length !== 0){
         var allPokemons = totalpokemons[0].slice(0,12)
         var pDb = pokemonDB[0].slice(0, 12)
@@ -36,7 +38,7 @@ export const Filter = () => {
             if (e.types[0].name === type) {
                 return e
             }
-            
+            return null
         })
         dispatch(clearState([]))
         return dispatch(getDisplay([result]))
@@ -47,6 +49,8 @@ export const Filter = () => {
         setType(e.target.value)
     }
 
+
+//----------------Funciones de los botones------------//    
     const TotalPokemons = async (e)=>{
         dispatch(clearState([]))
         dispatch(getPokemons())
@@ -107,7 +111,7 @@ export const Filter = () => {
                     <option>Elegir</option>
                 {type.length !== 0 ?
                     types[0].map((e)=>{
-                        return <option value={e.name} name="Normal" >{e.name}</option>
+                        return <option value={e.name} name="Normal" key={e.id}>{e.name}</option>
                                         }) :
                                         <option>Cargando..</option>
                 }

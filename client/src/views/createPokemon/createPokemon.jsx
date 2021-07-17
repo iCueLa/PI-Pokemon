@@ -39,7 +39,6 @@ export function CreatePokemon(){
             ...values,
             [e.target.name]: [...type, e.target.value]
         }))
-        console.log(e.target.value)
     }
     function resetType(e){
         setType([])
@@ -47,7 +46,6 @@ export function CreatePokemon(){
             ...values,
             [e.target.name]: []
         }))
-        console.log(TYPES)
     }
 
     const handleSubmit = (e) =>{
@@ -63,7 +61,6 @@ export function CreatePokemon(){
     return (
         <div className={s.container}>
             <div className={s.Form}>
-
             <form onSubmit={handleSubmit} >
                 <div className={s.containerInput}>
                     <label htmlFor="Name">Name:</label>
@@ -115,20 +112,20 @@ export function CreatePokemon(){
                     </div>
                 <div className={s.containerButon}>
                     {input.type.length > 2?
-                    <p>solo podes elegir dos tipos de pokemons</p>:<>
+                    <p>solo podes elegir dos tipos de pokemons</p>:
+                    <>
                     <label htmlFor="type">Type:  </label>
                             <select name="type" onChange={handleChangeType} className={s.BUTON}>
                                     <option>Elegir...</option>
                     {
                         TYPES.length === 0?
-                            <option>cargando...</option> :
+                            <option>cargando...</option>
+                                     :
                                         TYPES[0].map(e => {
-                                            return <option value={e.id} name="Normal" /* id={1} */>{e.name}</option>
-                                        })
+                                            return <option value={e.id} name="Normal" /* id={1} */>{e.name}</option>})
                     }
-                    </select>
+                            </select>
                     </>
-
                     }
                 </div>
                 {input.type.length > 2 ?
@@ -136,18 +133,16 @@ export function CreatePokemon(){
                     <p className={s.containerButon}>Resetea tus tipos porfavor</p>
                     </>
                     :
-                    <>
                     <div className={s.containerButon}>
                         <button className={s.PushButon}>Agregar Pokemon</button> 
-
-                    </div>
-                    </>
+                    </div>    
 
                 }
             </form>
             {
                 input.type.length > 2 ?
-                <><div className={s.containerButon}>
+                <>
+                <div className={s.containerButon}>
                     <button onClick={resetType} name="type" className={s.BUTON}>Resetear</button>
 
                 </div>

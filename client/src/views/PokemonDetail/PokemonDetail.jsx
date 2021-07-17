@@ -74,9 +74,10 @@ export const PokemonDetail = () => {
                 </div>
                 </>
                 :pokemon === undefined?
-                        <img src="https://i.pinimg.com/originals/4d/f0/38/4df03842be46631dc8b4f1b313638161.gif" /* width="300" height="300" */ alt="" className={s.loading} />:
+                        <img src="https://i.pinimg.com/originals/4d/f0/38/4df03842be46631dc8b4f1b313638161.gif"  alt="" className={s.loading} />
+                        :
                 <>
-                <h1>Pokemon no encontrado</h1>
+                            <h1>Pokemon no encontrado</h1>
                             <img src="https://media.tenor.com/images/4e01b5dc1c442f5af3d7cf11b79bda13/tenor.gif" alt="" />
                 </>
             }

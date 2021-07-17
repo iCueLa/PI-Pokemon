@@ -19,7 +19,6 @@ export const Pokemons = () => {
                     ) :
                     display[0].map((e) => {
                         return <Card
-                            key={e.name}
                             name={e.name}
                             id={e.id}
                             img={e.sprite}

@@ -19,7 +19,7 @@ export const Inicio = () => {
         dispatch(getPokemonsDB())
         dispatch(getPokemonsAPI())
         dispatch(getType())
-    },[])
+    }, [dispatch])
 
     const prueba = pokemon.slice(0.12)
 

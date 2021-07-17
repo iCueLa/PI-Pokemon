@@ -10,7 +10,6 @@ import j from "./Pokedex.module.css"
 const Pokedex = () => {
 
     const dispatch = useDispatch()
-
     const state = useSelector(state => state.totalpokemons)
     if(state.length !== 0){
         var index = state[0].slice(0, 12)
@@ -21,11 +20,11 @@ const Pokedex = () => {
 
 
     useEffect(()=>{
-        dispatch(getPokemonsDB())
-        dispatch(getPokemons())
-        dispatch(getType())
         dispatch(getPokemonsAPI())
-    },[])
+        dispatch(getPokemons())
+        dispatch(getPokemonsDB())
+        dispatch(getType())
+    }, [dispatch])
 
 
     return (
@@ -35,7 +34,7 @@ const Pokedex = () => {
                 <div className={j.Pagination}>
                     <h1 className={
                         j.pokedex
-                    }>Pokedex</h1>
+                    }>Pikadex</h1>
                     <div>
                         {
                             state.lenght === 0 ?
