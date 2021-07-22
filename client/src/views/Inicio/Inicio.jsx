@@ -21,10 +21,10 @@ export const Inicio = () => {
         dispatch(getType())
     }, [dispatch])
 
-    const prueba = pokemon.slice(0.12)
+    const render = pokemon.slice(0.12)
 
     const handleClick =()=>{
-        dispatch(getDisplay([prueba]))
+        dispatch(getDisplay([render]))
         
     }
     return (

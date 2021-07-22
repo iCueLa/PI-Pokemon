@@ -46,7 +46,7 @@ export const getDisplay = (payload)=>{
 
 export const clearState = (payload)=>{
     return (dispatch)=>dispatch({type: GET_DISPLAYS, payload: payload})
-}
+    }
 
  
 export const getdata = (id)=>{

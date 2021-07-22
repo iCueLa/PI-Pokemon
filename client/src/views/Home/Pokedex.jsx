@@ -21,20 +21,22 @@ const Pokedex = () => {
 
     useEffect(()=>{
         dispatch(getPokemonsAPI())
-        dispatch(getPokemons())
+        /* dispatch(getPokemons()) */
         dispatch(getPokemonsDB())
         dispatch(getType())
-    }, [dispatch])
+    }, [])
 
 
     return (
         <div className={j.BODY}>
-            {state && state.lenght === 0?
-            <div>CARGANDO...</div>:<>
+            {state && state.length === 0?
+                <img src="https://i.pinimg.com/originals/4d/f0/38/4df03842be46631dc8b4f1b313638161.gif" alt="" className={j.loading}/>
+                :
+                <>
                 <div className={j.Pagination}>
-                    <h1 className={
-                        j.pokedex
-                    }>Pikadex</h1>
+                    <h1 className={j.pokedex }>
+                        Pikadex
+                        </h1>
                     <div>
                         {
                             state.lenght === 0 ?
@@ -43,10 +45,9 @@ const Pokedex = () => {
                         }
                     </div>
                 </div>   
-                    <Pokemons />   
+                <Pokemons />          
             </>
             }
-                
         </div>
     )
 }

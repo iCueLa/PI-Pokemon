@@ -38,7 +38,7 @@ router.get('/', async(req,res,next)=>{
 router.get('/API', async(req, res, next)=>{
 const result = await getPokemonsApi()
 try{
-  res.status(200).json(result)
+  return res.status(200).json(result)
 }catch(err){
   next(err)
 }
@@ -47,7 +47,7 @@ try{
 router.get('/DB', async(req, res, next)=>{
 const result = await getPokemonsDb()
 try{
-  res.status(200).json(result)
+  return res.status(200).json(result)
 }catch(err){
   next(err)
 }

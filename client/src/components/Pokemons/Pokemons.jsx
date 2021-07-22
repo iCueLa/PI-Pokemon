@@ -17,15 +17,16 @@ export const Pokemons = () => {
                     </div>
                     </>
                     ) :
-                    display[0].map((e) => {
-                        return <Card
-                            name={e.name}
-                            id={e.id}
-                            img={e.sprite}
-                            type={e.types}
-                        />
-
-                    })
+                    display[0].map((e) => (
+                        <div key={e.id}>
+                            <Card
+                               name={e.name}
+                               id={e.id}
+                               img={e.sprite}
+                               type={e.types}
+                           />
+                        </div>
+                    ))
                 }
             </div>
         </div>

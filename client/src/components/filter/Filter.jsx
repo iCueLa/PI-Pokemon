@@ -109,11 +109,10 @@ export const Filter = () => {
                 <label >Type: </label>
                 <select name="type" id="type" onChange={handleChange} className={s.Select} >
                     <option>Elegir</option>
-                {type.length !== 0 ?
+                    {type.length === 0 ? <option>Cargando..</option>:
                     types[0].map((e)=>{
                         return <option value={e.name} name="Normal" key={e.id}>{e.name}</option>
-                                        }) :
-                                        <option>Cargando..</option>
+                                        }) 
                 }
 
                 </select>

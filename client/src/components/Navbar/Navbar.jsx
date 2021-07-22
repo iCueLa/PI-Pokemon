@@ -16,7 +16,6 @@ export default function NavBar() {
                     <li className={s.ListItem}>
                         <NavLink exact to="/Home">Home</NavLink>
                         <NavLink to="/Home/Add">Add Pokemon</NavLink>
-                        <NavLink to="/Home/FavoritePokemon">Favoritos</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -24,7 +23,7 @@ export default function NavBar() {
             </div>
             <div className={s.Search}>
                 <div className={s.Searcher}>
-                    <Search/>
+                    {<Search/>}
                 </div>
                     <NavLink exact to="/" ><img src="https://image.flaticon.com/icons/png/512/188/188987.png" width="30" height="30" alt="" /></NavLink>
             </div>

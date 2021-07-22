@@ -24,22 +24,11 @@
     position: relative;
     width: max-content;
 }
-.IMAGEN{
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+
+.loading {
+    display: flex;
+    image-resolution: initial;
+    background-position: center;
 }
 
-
-
-
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
